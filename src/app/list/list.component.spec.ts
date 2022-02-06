@@ -51,8 +51,7 @@ describe('ListComponent', () => {
   it('should add the new list item to the component', () => {
     service = new ListService();
     const testListItem = 'New List Item';
-      component.addToList(testListItem);
-      console.log('component list: ', component.list);
-      expect(component.list).toContain(testListItem);
+    component.addToList(testListItem);
+    expect(component.list).toContain(testListItem);
   });
 });
