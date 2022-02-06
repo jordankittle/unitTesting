@@ -1,0 +1,11 @@
+<div class="list">
+    <div>
+        <span *ngFor="let item of list">
+            {{item}}
+        </span>
+    </div>
+    <div>
+        <input #listInput class="list-input" type="text">
+        <button (click)="addToList(listInput.value)">Add To List</button>
+    </div>
+</div>
