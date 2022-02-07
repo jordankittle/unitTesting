@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EMPTY, from, Observable, of } from 'rxjs';
+import { EMPTY, from } from 'rxjs';
 import { ListService } from '../services/list.service';
 
 import { ListComponent } from './list.component';
