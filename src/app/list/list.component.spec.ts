@@ -49,8 +49,13 @@ describe('ListComponent', () => {
   });
 
   it('should add the new list item to the component', () => {
-    service = new ListService();
+    const testList = ['Item 1', 'Item 2'];
     const testListItem = 'New List Item';
+    const spy  = spyOn<any>(service, 'getList')
+      .and.callFake(() => {
+        return from([testList]);
+      });
+    component.ngOnInit();
     component.addToList(testListItem);
     expect(component.list).toContain(testListItem);
   });
